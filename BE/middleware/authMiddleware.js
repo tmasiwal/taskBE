@@ -51,12 +51,12 @@ const authMiddle = async (req, res, next) => {
           req.body.username = decoded.username;
          
 
-          // Continue to the next middleware
+          
           next();
         }
       });
     } else {
-      // No access token provided
+    
       res.status(400).send("Please login first");
     }
   } catch (error) {
